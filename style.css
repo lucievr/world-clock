@@ -1,0 +1,70 @@
+html {
+  background-image: url("./cool-background.png");
+  background-size: cover;
+  font-family: 'helvetica neue';
+  text-align: center;
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-size: 2rem;
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.clock {
+  width: 30rem;
+  height: 30rem;
+  border: 20px solid rgb(55, 3, 85);
+  border-radius: 50%;
+  margin: 50px auto;
+  position: relative;
+  padding: 2rem;
+  box-shadow:
+    0 0 0 4px rgba(0, 0, 0, 0.1),
+    inset 0 0 0 3px #EFEFEF,
+    inset 0 0 10px black,
+    0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.clock-face {
+  position: relative;
+  /* background-image: url("http://clipart-library.com/images/8TzKz9yRc.png"); */
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px);
+  /* account for the height of the clock hands */
+}
+
+.hand {
+  width: 50%;
+  height: 6px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing: ease-in-out;
+  border-radius: 4px;
+}
+
+.hour-hand {
+  z-index: 3;
+  background-color: slategrey;
+
+}
+
+.min-hand {
+  z-index: 4;
+}
+
+.second-hand {
+  background-color: red;
+  height: 3px;
+  border-radius: 2px;
+  z-index: 2;
+}
